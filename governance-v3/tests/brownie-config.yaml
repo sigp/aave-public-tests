@@ -1,0 +1,78 @@
+# NOTE: may want to move this to audit root directory, if target project
+# is structured such that brownie can have that set directly as the `contracts` directory
+# (to avoid copying)
+project_structure:
+    build: build
+    contracts: contracts
+    interfaces: interfaces
+    reports: reports
+    scripts: scripts
+    tests: tests
+
+networks:
+    default: development
+    development:
+        gas_limit: max
+        gas_buffer: 1
+        gas_price: 0
+        reverting_tx_gas_limit: max
+        default_contract_owner: true
+        cmd_settings: 
+            accounts: 20
+            default_balance: 1000000
+    dev-hardhat-local:
+        cmd: npx hardhat node
+        timeout: 120000
+        cmd_settings:
+            accounts: 10
+            port: 8545
+            gas_limit: 12000000
+            mnemonic: brownie
+    live:
+        gas_limit: auto
+        gas_buffer: 1.1
+        gas_price: auto
+        reverting_tx_gas_limit: false
+        default_contract_owner: false
+
+compiler:
+    evm_version: null
+    solc:
+        version: 0.8.20
+        optimizer:
+            enabled: true
+            runs: 200
+        remappings:
+            - "aave-a-token-with-delegation/contracts=deps/aave-a-token-with-delegation-b32a168df4ef7d97deeb80a2fcafa1d4e4077335/src/contracts"
+            - "aave-crosschain-infra/contracts=deps/aave-crosschain-infra-5ce185013ddd39b1676bcd68b07050b1187c74bf/src/contracts"
+            - "aave-token-v3=deps/aave-token-v3-f32516fcd71e9544ac20cd1ad4f7fa2470db43e6/src"
+            - "solidity-utils/contracts=deps/solidity-utils/src/contracts"
+            - "openzeppelin-contracts/contracts=deps/openzeppelin-contracts-4.8.3/contracts"
+    vyper:
+        version: null
+
+console:
+    show_colors: true
+    color_style: monokai
+    auto_suggest: true
+    completions: true
+
+reports:
+    exclude_paths: null
+    exclude_contracts: null
+
+hypothesis:
+    deadline: null
+    max_examples: 50
+    report_multiple_bugs: False
+    stateful_step_count: 10
+    phases:
+        explicit: true
+        reuse: true
+        generate: true
+        target: true
+        shrink: true
+
+autofetch_sources: false
+dependencies: null
+dev_deployment_artifacts: false

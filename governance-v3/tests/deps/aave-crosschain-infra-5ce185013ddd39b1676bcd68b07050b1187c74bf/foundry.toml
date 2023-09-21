@@ -1,0 +1,20 @@
+[profile.default]
+src = 'src'
+test = 'tests'
+script = 'scripts'
+out = 'out'
+libs = ['lib']
+remappings = [
+  'solidity-utils/=lib/solidity-utils/src/',
+  'hyperlane-monorepo/=lib/hyperlane-monorepo/solidity/',
+  '@openzeppelin/=lib/openzeppelin-contracts/'
+]
+
+[rpc_endpoints]
+ethereum="${RPC_ETHEREUM}"
+optimism = "${RPC_OPTIMISM}"
+avalanche = "${RPC_AVALANCHE}"
+polygon = "${RPC_POLYGON}"
+goerli="${RPC_GOERLI}"
+
+# See more config options https://github.com/gakonst/foundry/tree/master/config

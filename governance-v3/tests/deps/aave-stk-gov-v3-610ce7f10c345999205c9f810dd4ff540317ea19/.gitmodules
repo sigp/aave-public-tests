@@ -1,0 +1,16 @@
+[submodule "lib/forge-std"]
+	path = lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "lib/aave-helpers"]
+	path = lib/aave-helpers
+	url = https://github.com/bgd-labs/aave-helpers
+[submodule "lib/openzeppelin-contracts"]
+	path = lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
+[submodule "lib/aave-address-book"]
+	path = lib/aave-address-book
+	url = https://github.com/bgd-labs/aave-address-book
+[submodule "lib/aave-token-v3"]
+	path = lib/aave-token-v3
+	url = https://github.com/bgd-labs/aave-token-v3
+  branch = feat/base-delegation-isolation

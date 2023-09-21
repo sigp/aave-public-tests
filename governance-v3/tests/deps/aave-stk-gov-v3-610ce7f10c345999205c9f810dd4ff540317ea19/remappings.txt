@@ -1,0 +1,11 @@
+@aave/core-v3/=lib/aave-address-book/lib/aave-v3-core/
+@aave/periphery-v3/=lib/aave-address-book/lib/aave-v3-periphery/
+aave-address-book/=lib/aave-address-book/src/
+aave-helpers/=lib/aave-helpers/src/
+aave-v3-core/=lib/aave-address-book/lib/aave-v3-core/
+aave-v3-periphery/=lib/aave-address-book/lib/aave-v3-periphery/
+aave-token-v3/=lib/aave-token-v3/src
+ds-test/=lib/forge-std/lib/ds-test/src/
+forge-std/=lib/forge-std/src/
+openzeppelin-contracts/=lib/openzeppelin-contracts/
+solidity-utils/=lib/aave-helpers/lib/solidity-utils/src/
